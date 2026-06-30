@@ -6,8 +6,9 @@ import About from './components/About'
 import TechnicalSkills from './components/TechnicalSkills'
 import Services from './components/Services'
 import Projects from './components/Projects'
-import ContentCreator from './components/ContentCreator'
+import Research from './components/Research'
 import Internships from './components/Internships'
+import Education from './components/Education'
 import Leadership from './components/Leadership'
 import Certificates from './components/Certificates'
 import SoftSkills from './components/SoftSkills'
@@ -24,8 +25,9 @@ function App() {
       <TechnicalSkills />
       <Services />
       <Projects />
-      <ContentCreator />
+      <Research />
       <Internships />
+      <Education />
       <Leadership />
       <Certificates />
       <SoftSkills />

@@ -13,19 +13,25 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
+const PaperIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>
+);
+
 const ProjectCard = ({ project, aosDelay }) => (
-  <div 
+  <div
     data-aos="fade-up"
     data-aos-delay={aosDelay}
     className={`relative rounded-2xl p-[1px] group transition-all duration-500 ${
-      project.isFlagship 
-        ? 'bg-gradient-to-br from-red-500/50 via-white/10 to-red-500/30 hover:from-red-500 hover:via-red-400/30 hover:to-red-500/60' 
+      project.isFlagship
+        ? 'bg-gradient-to-br from-red-500/50 via-white/10 to-red-500/30 hover:from-red-500 hover:via-red-400/30 hover:to-red-500/60'
         : 'bg-white/10 hover:bg-white/20'
     }`}
   >
     <div className={`rounded-2xl p-6 md:p-8 h-full backdrop-blur-md transition-all duration-500 ${
-      project.isFlagship 
-        ? 'bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90' 
+      project.isFlagship
+        ? 'bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90'
         : 'bg-[#111111]/90 group-hover:bg-[#111111]/80'
     }`}>
       {/* Badge */}
@@ -49,7 +55,7 @@ const ProjectCard = ({ project, aosDelay }) => (
       {/* Tech Tags */}
       <div className="flex flex-wrap gap-2 mb-8">
         {project.techTags.map((tag) => (
-          <span 
+          <span
             key={tag}
             className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
           >
@@ -61,59 +67,49 @@ const ProjectCard = ({ project, aosDelay }) => (
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-3">
         {/* GitHub */}
-        {project.links.github && (
-          <a 
+        {project.links.github ? (
+          <a
             href={project.links.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300 group/btn"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300"
           >
             <GitHubIcon />
             GitHub
           </a>
-        )}
+        ) : null}
 
-        {/* Live Demo (single) */}
-        {project.links.demo !== undefined && (
-          <a 
-            href={project.links.demo || '#'}
-            target={project.links.demo ? "_blank" : undefined}
-            rel={project.links.demo ? "noopener noreferrer" : undefined}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-              project.links.demo 
-                ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
-                : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
-            }`}
-          >
-            <ExternalLinkIcon />
-            {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
-          </a>
-        )}
-
-        {/* Frontend Demo (Karigar) */}
-        {project.links.frontendDemo && (
-          <a 
-            href={project.links.frontendDemo}
+        {/* Live Demo */}
+        {project.links.demo !== undefined && project.links.demo !== null && (
+          <a
+            href={project.links.demo}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
           >
             <ExternalLinkIcon />
-            Frontend Demo
+            Live Demo
           </a>
         )}
 
-        {/* Backend API (Karigar) */}
-        {project.links.backendApi && (
-          <a 
-            href={project.links.backendApi}
+        {/* Research Paper */}
+        {project.links.paper && (
+          <a
+            href={project.links.paper}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white/20 transition-all duration-300"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
           >
-            <ExternalLinkIcon />
-            Backend API
+            <PaperIcon />
+            Research Paper
           </a>
+        )}
+
+        {/* Confidential notice for industry projects */}
+        {!project.links.github && !project.links.demo && !project.links.paper && (
+          <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-white/40 border border-white/10 text-sm font-semibold cursor-default">
+            🔒 Proprietary / Confidential
+          </span>
         )}
       </div>
     </div>
@@ -124,7 +120,7 @@ const Projects = () => {
   return (
     <section id="projects" className="bg-[#0a0a0a] pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Header */}
         <div data-aos="fade-up" className="mb-16 md:mb-20">
           <div className="inline-block border border-white/20 rounded-full px-5 py-1.5 text-sm text-white/60 font-bold mb-8 shadow-sm bg-white/5 backdrop-blur-sm">
@@ -134,31 +130,33 @@ const Projects = () => {
             Work that speaks <br className="hidden md:block" />for itself
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-lg font-medium leading-relaxed">
-            A selection of projects that showcase my expertise in full-stack development and modern architecture.
+            Research projects and engineering systems built from hardware up — firmware, signal processing, and AI.
           </p>
         </div>
 
         {/* Project Cards */}
         <div className="flex flex-col gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <ProjectCard 
-              key={project.id} 
-              project={project} 
+            <ProjectCard
+              key={project.id}
+              project={project}
               aosDelay={String((index + 1) * 100)}
             />
           ))}
         </div>
 
-        {/* GitHub CTA */}
+        {/* LinkedIn CTA */}
         <div data-aos="fade-up" data-aos-delay="500" className="mt-16 flex justify-center">
           <a
-            href={socialLinks.github}
+            href={socialLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 text-white font-bold text-lg hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-all duration-500 group"
           >
-            <GitHubIcon />
-            Explore All My Repositories
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            View Full Profile on LinkedIn
             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>

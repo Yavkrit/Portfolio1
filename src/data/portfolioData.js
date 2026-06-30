@@ -1,296 +1,357 @@
 // ============================================================
-// portfolioData.js — Centralized configuration for Md Yusuf's Portfolio
+// portfolioData.js — Centralized configuration for Yavkrit Vashishtha's Portfolio
 // All external links, personal info, and content in one place.
 // Update this file to change any content across the entire site.
 // ============================================================
 
 export const personalInfo = {
-  name: "Md Yusuf",
-  firstName: "Md Yusuf",
-  brandName: "Md Yusuf",
-  title: "Full Stack & Java Developer",
-  location: "Bhopal, India",
-  phone: "+91 99396-08743",
+  name: "Yavkrit Vashishtha",
+  firstName: "Yavkrit",
+  brandName: "Yavkrit",
+  title: "Embedded Software Engineer & Research Scholar",
+  location: "Chandigarh, India",
+  phone: "+91 6359100188",
   emails: {
-    primary: "mdyusufcse096@iesuniversity.ac.in",
-    secondary: "yusuf.rgpv@gmail.com",
+    primary: "yvashishtha04@gmail.com",
+    secondary: "yvashishtha04@gmail.com",
   },
   summary:
-    "Aspiring software engineer and motivated B.Tech Computer Science student with solid skills in Java, Spring Boot, React, and Python. Passionate about building scalable full-stack applications with clean architecture and modern tech stacks.",
-  resumeUrl: "/Md_Yusuf_Resume_2026.pdf",
+    "Embedded Software Engineer and Research Scholar with 2+ years of industry experience in firmware development, Linux-based systems, and protocol integration for IP camera platforms. Pursuing Integrated M.Tech + Ph.D. in Biomedical Instrumentation & AI at AcSIR (CSIR-CSIO), focusing on Terahertz-based diagnostic imaging.",
+  resumeUrl: "/Yavkrit_Vashishtha_Resume.pdf",
 };
 
 export const socialLinks = {
-  github: "https://github.com/mdyusuf0",
-  linkedin: "https://linkedin.com/in/mdyusuf0",
-  instagram: "https://instagram.com/heyyusuffff",
+  github: "https://github.com/yavkritvashishtha",
+  linkedin: "https://linkedin.com/in/yavkritvashishtha",
+  instagram: "https://linkedin.com/in/yavkritvashishtha",
 };
 
 export const heroContent = {
-  greeting: "Hi, I'm Md Yusuf",
-  titleHighlight: "Full Stack & Java Developer",
+  greeting: "Hi, I'm Yavkrit Vashishtha",
+  titleHighlight: "Embedded Engineer & Research Scholar",
   subtitle:
-    "I build fast, scalable applications using Java, Spring Boot, MERN Stack, and Python.",
+    "Building firmware, designing sensor networks, and pushing the boundary of THz-based biomedical diagnostics.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
-    href: "mailto:mdyusufcse096@iesuniversity.ac.in?subject=Hiring Inquiry – Portfolio&body=Hello Md Yusuf,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
+    href: "mailto:yvashishtha04@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello Yavkrit,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
   },
-  ctaResume: { text: "Download Resume", href: "/Md_Yusuf_Resume_2026.pdf" },
+  ctaResume: { text: "Download Resume", href: "/Yavkrit_Vashishtha_Resume.pdf" },
 };
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Md Yusuf</span>, an aspiring software engineer based in Bhopal, India, dedicated to crafting clean, functional, and highly scalable full-stack applications.`,
-  techStack: ["Java", "Spring Boot", "MERN Stack"],
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Yavkrit Vashishtha</span>, an Embedded Software Engineer and Research Scholar based in Chandigarh, India. I build robust firmware, design low-level peripheral drivers, and architect AI-driven sensor systems at the intersection of hardware and intelligence.`,
+  techStack: ["C / C++", "Linux & RTOS", "Python & TensorFlow"],
 };
 
 export const skillsContent = {
   badge: "My Process",
-  heading: "Here's how I turn ideas into real-world applications",
+  heading: "How I engineer from concept to deployment",
   description:
-    "I follow a structured, creative, and highly technical approach to turn ideas into robust full-stack applications.",
+    "A structured, hardware-grounded approach to turning complex engineering problems into reliable embedded systems and research outcomes.",
   cards: [
     {
       number: "01",
       title: "Research",
-      text: "I start by understanding goals, user requirements, and technical constraints to lay a rock-solid foundation for the project.",
+      text: "I start by deeply studying the problem domain — hardware constraints, protocol standards, and literature gaps — to build a rock-solid technical foundation.",
     },
     {
       number: "02",
       title: "Design",
-      text: "Crafting clean architecture, intuitive interfaces, and pixel-perfect wireframes that guarantee an engaging and accessible user experience.",
+      text: "Architecting modular firmware layers, sensor interfaces, and algorithm pipelines with clear separation of concerns and documented signal flows.",
     },
     {
       number: "03",
-      title: "Develop",
-      text: "Building scalable backends and responsive frontends using modern tech stacks and best practices.",
+      title: "Implement",
+      text: "Writing production-quality C/C++ firmware, integrating peripherals (SPI, I2C, UART, ADC), and running unit tests with Google Test & Mock.",
     },
     {
       number: "04",
-      title: "Deploy",
-      text: "Rigorous testing, performance optimization, and seamless deployment to cloud infrastructure, followed by ongoing support.",
+      title: "Validate",
+      text: "Rigorous bench testing, performance characterisation, cross-compilation for ARM targets, and documented experimental results with statistical analysis.",
     },
   ],
-  endText: "Ready to ship!",
+  endText: "Production ready!",
 };
 
-// Brand New Technical Skills Data
 export const technicalSkills = {
   categories: [
     {
-      title: "Programming Languages",
+      title: "Languages",
       skills: [
-        { name: "Java", level: 90 },
-        { name: "C++", level: 85 },
-        { name: "Python", level: 75 }
-      ]
+        { name: "C", level: 92 },
+        { name: "C++", level: 90 },
+        { name: "Python", level: 80 },
+        { name: "SQL", level: 70 },
+        { name: "Bash", level: 75 },
+      ],
     },
     {
-      title: "Full Stack",
+      title: "Embedded & Hardware",
       skills: [
-        { name: "MERN Stack", level: 90 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
-        { name: "JavaScript", level: 92 }
-      ]
+        { name: "STM32 Microcontrollers", level: 88 },
+        { name: "Arduino / Raspberry Pi", level: 90 },
+        { name: "RTOS", level: 85 },
+        { name: "BSP Development", level: 82 },
+        { name: "Yocto Build System", level: 78 },
+        { name: "ARM Cross-compilation", level: 80 },
+      ],
     },
     {
-      title: "Backend",
+      title: "Peripheral Drivers",
       skills: [
-        { name: "Spring Boot", level: 88 },
-        { name: "FastAPI", level: 75 },
-        { name: "REST APIs", level: 90 }
-      ]
+        { name: "GPIO / SPI / I2C", level: 90 },
+        { name: "UART / ADC", level: 88 },
+        { name: "Interrupt Handling", level: 85 },
+        { name: "Memory Optimization", level: 82 },
+      ],
     },
     {
-      title: "Databases",
+      title: "Protocols & Standards",
       skills: [
-        { name: "MongoDB", level: 88 },
-        { name: "MySQL", level: 85 },
-        { name: "Firebase", level: 80 }
-      ]
+        { name: "ONVIF (S/G/T/M)", level: 88 },
+        { name: "SUNAPI", level: 85 },
+        { name: "RESTful APIs", level: 82 },
+        { name: "TCP/IP", level: 78 },
+      ],
     },
     {
-      title: "Tools & Automation",
+      title: "AI & Signal Processing",
       skills: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "VS Code", level: 95 },
-        { name: "Postman", level: 88 },
-        { name: "n8n", level: 82 },
-        { name: "MongoDB Compass", level: 85 },
-        { name: "Antigravity", level: 80 },
-        { name: "Codex", level: 75 }
-      ]
+        { name: "TensorFlow", level: 78 },
+        { name: "Signal Processing", level: 80 },
+        { name: "Data Structures & Algorithms", level: 85 },
+        { name: "AI-based IoT Systems", level: 75 },
+      ],
     },
     {
-      title: "Computer Science Concepts",
+      title: "Tools & Platforms",
       skills: [
-        { name: "Data Structures", level: 88 },
-        { name: "Algorithms", level: 85 },
-        { name: "DBMS", level: 86 },
-        { name: "OOP", level: 90 },
-        { name: "Software Engineering", level: 84 }
-      ]
-    }
-  ]
+        { name: "Linux", level: 88 },
+        { name: "Git", level: 90 },
+        { name: "GDB / Make / CMake", level: 85 },
+        { name: "Google Test / Mock", level: 82 },
+        { name: "Postman", level: 78 },
+        { name: "VS Code", level: 92 },
+      ],
+    },
+  ],
 };
 
-// Brand New Content Creation Data
-export const contentCreation = {
-  badge: "Cinematic Content",
-  heading: "Creative Direction & Cinematic Edits",
-  description: "Beyond coding, I craft visual stories with premium editing, color grading, and creative pacing.",
+export const researchContent = {
+  badge: "Research & Innovation",
+  heading: "Engineering at the Edge of Hardware & Intelligence",
+  description:
+    "From bidirectional Li-Fi systems to AI-assisted THz biomedical imaging — building systems that push the boundary of what embedded hardware can do.",
   categories: [
     {
-      title: "Cinematic Reels",
-      description: "Visual stories crafted with cinematic lighting, premium color grading, and high-impact sound design.",
-      stats: "50+ Reels Created",
-      icon: "🎥"
+      title: "THz Biomedical Imaging",
+      description:
+        "Designing AI-driven sub-THz imaging pipelines for non-invasive plantar skin hydration mapping using a 100 GHz CW FPA camera at CSIR-CSIO.",
+      stats: "Active PhD Research",
+      icon: "🔬",
     },
     {
-      title: "Travel Videos",
-      description: "Immersive travel vlogs and aesthetic edits capturing cultures, landscapes, and visual rhythms.",
-      stats: "15+ Countries/Cities",
-      icon: "✈️"
+      title: "LIME — Li-Fi System",
+      description:
+        "Bidirectional free-space optical communication using laser diodes and photovoltaic receivers with adaptive threshold calibration. 100% text accuracy at 1 m.",
+      stats: "Published Research Paper",
+      icon: "📡",
     },
     {
-      title: "Educational Reels",
-      description: "Fast-paced tech tutorials and educational content designed to simplify coding and software engineering.",
-      stats: "100k+ Views",
-      icon: "🧠"
+      title: "Firmware & Protocol Engineering",
+      description:
+        "ONVIF/SUNAPI integration for Hanwha & Honeywell IP cameras; low-level STM32 peripheral drivers (GPIO, SPI, I2C, UART, ADC) on Yocto-based BSP.",
+      stats: "2+ Years Industry",
+      icon: "⚙️",
     },
     {
-      title: "My Own Creative Edits",
-      description: "Experimental transitions, 3D overlays, and trendsetting visual effects that push creative bounds.",
-      stats: "Personal Projects",
-      icon: "⚡"
-    }
-  ]
+      title: "AI-Driven IoT Systems",
+      description:
+        "Architecting embedded sensor networks with TensorFlow-based analytics for THz signal acquisition, classification, and anomaly detection in biomedical contexts.",
+      stats: "AcSIR / CSIR-CSIO",
+      icon: "🧠",
+    },
+  ],
 };
 
-// Brand New Leadership Data
 export const leadershipList = [
   {
-    title: "IEEE Madhya Pradesh Section (Social Media Team)",
-    description: "Managed and coordinated digital content, driving audience engagement and designing interactive visual campaigns for tech events.",
-    role: "Social Media Coordinator",
-    badge: "Volunteer"
+    title: "LIME — Independent Research Initiative",
+    description:
+      "Self-initiated an end-to-end bidirectional Li-Fi communication system from scratch during M.Tech-PhD studies — designed hardware, wrote firmware, built custom PCBs, and produced a full research paper submitted to AcSIR.",
+    role: "Sole Researcher & Engineer",
+    badge: "Self-Driven",
   },
   {
-    title: "Team Coordinator – Go-Kart International Racing 2K25",
-    description: "Led multi-disciplinary teams in project management, budget control, and logistics coordination for a high-profile international racing event.",
-    role: "Team Coordinator",
-    badge: "Leadership"
+    title: "AcSIR — Integrated M.Tech + Ph.D. Research",
+    description:
+      "Driving an independent doctoral research programme on AI-assisted sub-THz imaging for plantar skin hydration mapping at CSIR-CSIO under Dr. Naveen Sharma, Scientist D.",
+    role: "Research Scholar",
+    badge: "Research",
   },
   {
-    title: "5-Day MOE IDE Bootcamp, Roorkee",
-    description: "Participated in an intensive Innovation, Design, and Entrepreneurship Bootcamp organized by the Ministry of Education at IIT Roorkee.",
-    role: "Bootcamp Graduate",
-    badge: "Innovation"
+    title: "eInfochips — Cross-Functional Debugging Lead",
+    description:
+      "Led unit testing and debugging workflows with cross-functional teams across ONVIF, SUNAPI, and VMS protocol integrations for Hanwha and Honeywell IP camera products.",
+    role: "Embedded Software Engineer",
+    badge: "Industry",
   },
   {
-    title: "Hosted INFORIA Tech Summit Hackathon",
-    description: "Organized and hosted the flagship hackathon, managing registrations, mentoring participant teams, and coordinating judge evaluations.",
-    role: "Hackathon Organizer",
-    badge: "Co-Curricular"
+    title: "vivo / DBG Technology — Production Line Supervision",
+    description:
+      "Supervised assembly-line operators and enforced quality, functional, and reliability testing standards for OPPO, VIVO, Realme, and Xiaomi device production lines.",
+    role: "Associate System Engineer",
+    badge: "Leadership",
   },
   {
-    title: "Event Coordinator & Anchoring – INFORIA 2K25",
-    description: "Coordinated technical events and served as the main stage anchor, speaking in front of large crowds and managing the summit flow.",
-    role: "Stage Anchor & Coordinator",
-    badge: "Public Speaking"
-  }
+    title: "CHARUSAT — B.Tech ECE Capstone",
+    description:
+      "Completed a 4-year B.Tech in Electronics & Communication Engineering with a CGPA of 8.69/10, building strong foundations in analog circuits, digital systems, and embedded programming.",
+    role: "Undergraduate Engineer",
+    badge: "Academic",
+  },
 ];
 
-// Brand New Internships Data
-export const internshipsList = [
+export const experienceList = [
   {
-    organization: "Netlink, Bhopal",
-    role: "Data Analytics & BI Tools Intern",
-    duration: "June 2025 - August 2025",
-    skills: ["Data Analytics", "Business Intelligence", "Dashboard Design", "Data Modeling"],
-    tech: ["Lumenore", "MySQL", "Excel", "BI Tools"]
+    organization: "Academy of Scientific and Innovative Research (AcSIR / CSIR-CSIO)",
+    role: "Research Scholar — Integrated M.Tech + Ph.D.",
+    duration: "Jan 2025 – Present",
+    skills: [
+      "THz-based non-invasive diagnostic imaging",
+      "AI-driven analytics pipelines for THz signal classification",
+      "Deep learning with TensorFlow for biomedical data modelling",
+      "Embedded sensor network architecture",
+    ],
+    tech: ["TensorFlow", "Python", "C++", "Signal Processing", "CSIR-CSIO Lab"],
   },
   {
-    organization: "Canva",
-    role: "Visual Content Creator & Designer",
-    duration: "May 2024 - June 2024",
-    skills: ["Visual Designing", "Poster Design", "Team Branding", "Asset Creation"],
-    tech: ["Canva Pro", "Figma", "Canva Design Suite"]
+    organization: "eInfochips (An Arrow Company)",
+    role: "Embedded Software Engineer",
+    duration: "Jun 2023 – Jan 2025",
+    skills: [
+      "ONVIF (Profiles S, G, T, M) & SUNAPI integration for PTZ IP cameras",
+      "RESTful API integration for Video Management Systems (VMS)",
+      "Network Storage Drive (NSD) module for secure IP-based data caching",
+      "Low-level peripheral drivers: GPIO, SPI, I2C, UART, ADC on STM32",
+    ],
+    tech: ["C++", "Linux", "STM32", "ONVIF", "SUNAPI", "Yocto", "GDB"],
   },
   {
-    organization: "CollegeTips.in",
-    role: "Web Development Intern",
-    duration: "1 Month (Offline)",
-    skills: ["Frontend Development", "Responsive Layouts", "API Testing", "Web Performance"],
-    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
-  }
+    organization: "vivo / DBG Technology Co. Ltd.",
+    role: "Associate Manufacturing / System Engineer",
+    duration: "Jun 2021 – Jun 2022",
+    skills: [
+      "PCBA validation and SMT line operations",
+      "Touchscreen calibration and CCD inspection",
+      "Quality, functional, and reliability testing",
+      "Assembly-line operator supervision",
+    ],
+    tech: ["PCBA", "SMT", "CCD Inspection", "Quality Assurance", "Production Systems"],
+  },
 ];
 
-// Brand New Soft Skills Data
 export const softSkillsList = [
-  { name: "Leadership", icon: "👑", desc: "Guiding teams, managing tasks, and driving project completion with shared vision." },
-  { name: "Public Speaking", icon: "🎤", desc: "Confident stage presence, anchoring summits, and delivering articulate technical ideas." },
-  { name: "Team Collaboration", icon: "🤝", desc: "Collaborating across fields, building racing carts, and engineering code in sync." },
-  { name: "Communication", icon: "💬", desc: "Clear, concise, and structured interactions in both business and technical contexts." },
-  { name: "Problem Solving", icon: "🧩", desc: "Breaking down complex engineering tasks into clean, logical, and modular pieces." },
-  { name: "Adaptability", icon: "🌟", desc: "Quick to pick up new frameworks like FastAPI, Spring Boot, or automation tools like n8n." },
-  { name: "Creativity", icon: "🎨", desc: "Blending cinematic aesthetics with software structure to build premium experiences." },
-  { name: "Time Management", icon: "⏰", desc: "Balancing B.Tech studies, event hosting, and developing robust software platforms." }
+  {
+    name: "Systems Thinking",
+    icon: "🔧",
+    desc: "Decomposing complex hardware-software interactions into clean, modular, debuggable units.",
+  },
+  {
+    name: "Research Rigour",
+    icon: "📐",
+    desc: "Designing experiments with statistical validity, documenting results, and producing peer-quality technical reports.",
+  },
+  {
+    name: "Independent Initiative",
+    icon: "🚀",
+    desc: "Self-initiated the LIME project from scratch — hardware design, firmware, PCB fabrication, and a full research paper.",
+  },
+  {
+    name: "Cross-Team Collaboration",
+    icon: "🤝",
+    desc: "Working with cross-functional teams across protocol, QA, and firmware domains at eInfochips and CSIR-CSIO.",
+  },
+  {
+    name: "Technical Communication",
+    icon: "📝",
+    desc: "Producing clear technical documentation, research papers, and firmware specifications for complex embedded systems.",
+  },
+  {
+    name: "Problem Decomposition",
+    icon: "🧩",
+    desc: "Breaking ambiguous engineering challenges — from THz imaging gaps to OOK calibration — into solvable, testable sub-problems.",
+  },
+  {
+    name: "Continuous Learning",
+    icon: "📚",
+    desc: "Expanding from embedded firmware to biomedical AI, acquiring certifications in data science, C++ testing, and AI-for-managers.",
+  },
+  {
+    name: "Attention to Detail",
+    icon: "🎯",
+    desc: "Ensuring protocol compliance, timing accuracy in interrupt handlers, and measurement precision in experimental setups.",
+  },
 ];
 
 export const projects = [
   {
-    id: "foodmesh",
+    id: "thz-imaging",
     number: "01",
-    badge: "🚀 Flagship Project",
-    title: "FoodMesh",
+    badge: "🔬 PhD Research — AcSIR / CSIR-CSIO",
+    title: "AI-Assisted Sub-THz Plantar Imaging",
     description:
-      "FoodMesh — An enterprise-grade multi-tenant restaurant management and food ordering SaaS platform inspired by UrbanPiper. It enables restaurants to manage multiple outlets, menus, inventory, customers, staff, and orders through a scalable architecture with secure authentication, role-based access control, and real-time operations. Built with React, Next.js, NestJS, PostgreSQL, Redis, Kafka, Elasticsearch, Docker, Kubernetes, and AWS.",
+      "Designing and implementing an end-to-end computational pipeline for non-invasive plantar skin hydration mapping using a 100 GHz CW THz FPA camera (TeraSense Tera-1024, 32×32 px). Pipeline includes: multi-tile image stitching (phase-correlation registration + Gaussian-Laplacian pyramid blending), AI-based super-resolution, per-pixel dielectric model inversion for hydration extraction, and CNN/ViT-based classification across age groups. Validated against corneometer benchmark on Indian volunteers at CSIR-CSIO, Chandigarh.",
     techTags: [
-      "React",
-      "Next.js",
-      "NestJS",
-      "PostgreSQL",
-      "Redis",
-      "Kafka",
-      "Elasticsearch",
-      "Docker",
-      "Kubernetes",
-      "AWS",
+      "Python",
+      "TensorFlow",
+      "CNN",
+      "ViT",
+      "Image Processing",
+      "Signal Processing",
+      "THz Imaging",
+      "CSIR-CSIO",
     ],
     links: {
-      github: "https://github.com/ersamirsingh/UrbanPiper",
+      github: null,
       demo: null,
     },
     isFlagship: true,
   },
   {
-    id: "karigar",
+    id: "lime",
     number: "02",
-    badge: null,
-    title: "Karigar",
+    badge: "📡 Research Paper — AcSIR",
+    title: "LIME — Li-Fi Integrated Message Encoder",
     description:
-      "A platform connecting local skilled workers with customers, featuring real-time search, worker profiles, and booking management with full database integration.",
-    techTags: ["React", "Node.js", "MongoDB", "Express", "REST API"],
+      "Designed and built a bidirectional free-space optical communication system from scratch — two self-contained nodes, each with an Arduino UNO, two red laser transmitters, two solar-panel photovoltaic receivers, OLED display, 4×4 keypad, and hand-built audio PCBs (TIP142 Darlington modulator + LM358 voltage follower + PAM class-D amplifier). Key innovation: adaptive OOK threshold calibration algorithm (T = L_avg + K) requiring zero user input, validated across ambient illumination from <10 lux to 800 lux. Achieved 100% text accuracy at 1 m, MOS 3.8 audio at 1 m, and simultaneous 4-channel bidirectional operation.",
+    techTags: [
+      "Arduino",
+      "C/C++",
+      "OOK Modulation",
+      "Embedded Systems",
+      "Li-Fi / FSO",
+      "Adaptive Algorithms",
+      "Custom PCB",
+    ],
     links: {
-      github: "https://github.com/mdyusuf0/Karigar",
-      frontendDemo: "https://karigar-frontend.onrender.com",
-      backendApi: "https://karigar-zny2.onrender.com",
+      github: null,
+      paper: "/certificates/intellipaat_cert.pdf",
     },
     isFlagship: false,
   },
   {
-    id: "sentiment-analysis",
+    id: "onvif-vms",
     number: "03",
     badge: null,
-    title: "AI-Powered Sentiment Analysis",
+    title: "ONVIF/SUNAPI IP Camera Integration",
     description:
-      "A full-stack web application that analyzes citizen feedback using Artificial Intelligence to classify sentiments as positive, negative, or neutral. Features a responsive React frontend, a Node.js backend, MongoDB for data storage, and n8n automation for workflow orchestration — enabling real-time insights and efficient feedback management.",
-    techTags: ["React", "Node.js", "MongoDB", "n8n", "AI/ML", "REST API"],
+      "At eInfochips, developed and integrated ONVIF (Profiles S, G, T, M) and SUNAPI-compliant functionalities for PTZ and multi-sensor IP cameras (Hanwha, Honeywell) in C++ on Linux. Built RESTful API integrations for Video Management Systems (VMS), improving protocol compliance and interoperability. Implemented a Network Storage Drive (NSD) module enabling secure IP-based data caching. Applied RTOS task scheduling, interrupt handling, and memory optimisation to improve firmware reliability.",
+    techTags: ["C++", "Linux", "ONVIF", "SUNAPI", "REST APIs", "RTOS", "VMS"],
     links: {
-      github: "#", // Update when available
+      github: null,
     },
     isFlagship: false,
   },
@@ -299,61 +360,89 @@ export const projects = [
 export const certificates = {
   featured: [
     {
-      name: "Oracle Cloud Infrastructure 2025",
-      issuer: "Oracle",
-      icon: "☁️",
-    },
-    {
-      name: "Programming in Java (94%)",
-      issuer: "NPTEL",
-      icon: "☕",
-    },
-    {
-      name: "C Programming & Assembly Language",
-      issuer: "NPTEL",
-      icon: "⚙️",
-    },
-    {
-      name: "Technology Job Simulation",
-      issuer: "Deloitte",
-      icon: "💼",
-    },
-    {
-      name: "Career Edge – IT Primer",
-      issuer: "TCS iON",
+      name: "Advanced Certification in Data Science & AI",
+      issuer: "IIT Madras — Pravartak / Intellipaat",
       icon: "🎓",
+      pdfPath: "/certificates/ds_ai_cert.pdf",
+      fileName: "ds_ai_cert.pdf",
     },
     {
-      name: "Fundamentals of BI & Analytics",
-      issuer: "Lumenore",
+      name: "Data Science & AI — Course Completion",
+      issuer: "Intellipaat",
       icon: "📊",
+      pdfPath: "/certificates/intellipaat_cert.pdf",
+      fileName: "intellipaat_cert.pdf",
+    },
+    {
+      name: "C++ OOP, STL & Advanced Course",
+      issuer: "Udemy",
+      icon: "⚙️",
+      pdfPath: "/certificates/cpp_adv_course.pdf",
+      fileName: "cpp_adv_course.pdf",
+    },
+    {
+      name: "Advanced C Programming: Pointers & Memory Management",
+      issuer: "Udemy",
+      icon: "🧠",
+      pdfPath: "/certificates/cpp_adv_pointers.pdf",
+      fileName: "cpp_adv_pointers.pdf",
+    },
+    {
+      name: "C++ Unit Testing: Google Test & Mock",
+      issuer: "Udemy",
+      icon: "🧪",
+      pdfPath: "/certificates/cpp_unit_testing.pdf",
+      fileName: "cpp_unit_testing.pdf",
+    },
+    {
+      name: "AI for Managers",
+      issuer: "Microsoft & LinkedIn",
+      icon: "🤖",
+      pdfPath: "/certificates/ai_managers.pdf",
+      fileName: "ai_managers.pdf",
+    },
+    {
+      name: "Android App Development",
+      issuer: "Certification Course",
+      icon: "📱",
+      pdfPath: "/certificates/android_dev.pdf",
+      fileName: "android_dev.pdf",
     },
   ],
-  viewAllUrl:
-    "https://drive.google.com/file/d/1ObdGWtVSx8SsfR4AcbCySSd9LFXcAs9f/view?usp=sharing",
 };
 
-export const education = {
-  degree: "B.Tech – Computer Science & Engineering",
-  institution: "IES College of Technology (RGPV)",
-  cgpa: "8.35",
-  graduation: "2027",
-  twelfth: "12th Science – 81%",
-  tenth: "10th CBSE – 70%",
-};
+export const education = [
+  {
+    degree: "Integrated Dual Degree — M.Tech + Ph.D.",
+    field: "Biomedical Instrumentation, AI & Embedded Systems",
+    institution: "Academy of Scientific and Innovative Research (AcSIR)",
+    affiliation: "CSIR-CSIO, Chandigarh",
+    duration: "Jan 2025 – Present",
+    grade: "Enrolled",
+    type: "postgrad",
+  },
+  {
+    degree: "B.Tech — Electronics & Communication Engineering",
+    field: "Electronics & Communication Engineering",
+    institution: "Charotar University of Science and Technology (CHARUSAT)",
+    affiliation: "Anand, Gujarat, India",
+    duration: "Jul 2019 – May 2023",
+    grade: "CGPA: 8.69 / 10",
+    type: "undergrad",
+  },
+];
 
 export const footerContent = {
   taglines: [
-    "Software Engineering & Web Dev",
-    "Java · Spring Boot · React",
-    "Full Stack Applications",
+    "Embedded Systems & Firmware",
+    "C++ · Linux · RTOS · ONVIF",
+    "THz Biomedical Research",
   ],
-  credential: "B.Tech CSE · CGPA 8.35",
-  copyright: `© ${new Date().getFullYear()} Md Yusuf | Built with React`,
+  credential: "Integrated M.Tech + Ph.D. — AcSIR / CSIR-CSIO",
+  copyright: `© ${new Date().getFullYear()} Yavkrit Vashishtha | Built with React`,
 };
 
-// EmailJS Configuration
-// Will read directly from environment variables in Vite (starting with VITE_)
+// EmailJS Configuration — set env vars or update below
 export const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_EMAILJS_SERVICE_ID",
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_EMAILJS_TEMPLATE_ID",
