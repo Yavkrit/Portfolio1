@@ -47,13 +47,19 @@ const Navbar = () => {
     navigate(`/#${target}`);
   };
 
+  // Only the homepage has a full-bleed dark hero behind the navbar, so only
+  // there can the bar start fully transparent — every other page needs its
+  // themed solid background from the very top or it's unreadable in light mode.
+  const isHome = location.pathname === '/';
+  const showSolidBg = isScrolled || !isHome;
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isOpen
           ? 'bg-[#4f46e5] py-4'
-          : isScrolled
-            ? 'bg-black/70 light:bg-white/80 backdrop-blur-md py-4'
+          : showSolidBg
+            ? 'bg-black/70 light:bg-white/95 light:shadow-md light:shadow-black/5 light:border-b light:border-black/10 backdrop-blur-md py-4'
             : 'bg-transparent py-6'
       }`}
     >
@@ -101,14 +107,14 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-            className="w-10 h-10 rounded-full bg-white/10 light:bg-black/5 border border-white/20 light:border-black/10 text-white light:text-gray-900 flex items-center justify-center hover:bg-white/20 light:hover:bg-black/10 transition-all duration-300"
+            className="w-10 h-10 rounded-full bg-white/10 light:bg-gray-100 border border-white/20 light:border-gray-300 text-white light:text-gray-900 flex items-center justify-center hover:bg-white/20 light:hover:bg-gray-200 transition-all duration-300"
           >
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <a
             href="/#contact"
             onClick={(e) => goToAnchor('contact', e)}
-            className="px-6 py-2.5 rounded-full bg-white/10 light:bg-black/5 border border-white/20 light:border-black/10 text-white light:text-gray-900 font-semibold hover:bg-white/20 light:hover:bg-black/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md whitespace-nowrap"
+            className="px-6 py-2.5 rounded-full bg-white/10 light:bg-gray-100 border border-white/20 light:border-gray-300 text-white light:text-gray-900 font-semibold hover:bg-white/20 light:hover:bg-gray-200 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md whitespace-nowrap"
           >
             Hire Me
           </a>
@@ -119,7 +125,7 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-            className="w-9 h-9 rounded-full bg-white/10 light:bg-black/5 text-white light:text-gray-900 flex items-center justify-center"
+            className="w-9 h-9 rounded-full bg-white/10 light:bg-gray-100 text-white light:text-gray-900 flex items-center justify-center"
           >
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>
@@ -127,7 +133,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
-            className="text-white focus:outline-none p-2"
+            className={`focus:outline-none p-2 ${isOpen ? 'text-white' : 'text-white light:text-gray-900'}`}
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>

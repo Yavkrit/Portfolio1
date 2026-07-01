@@ -167,17 +167,17 @@ const Hero = () => {
 
         {/* Right Side: Play Video Button */}
         <div className="relative mt-8 md:mt-0 self-start md:self-auto">
-          {/* Discovery guide — bold dotted semicircle bulging outward, sweeping into the play/pause button, fades once played */}
+          {/* Discovery guide — bold dotted semicircle bulging outward from the opposite side, sweeping into the play/pause button, fades once played */}
           {!isPlaying && (
             <svg
-              className="hidden md:block absolute -top-32 -left-48 w-56 h-48 pointer-events-none text-white"
-              viewBox="0 0 180 150"
+              className="hidden md:block absolute -top-32 -left-48 w-72 h-48 pointer-events-none text-white"
+              viewBox="0 0 230 150"
               fill="none"
               aria-hidden="true"
               style={{ filter: 'drop-shadow(0 2px 5px rgba(0,0,0,0.9))' }}
             >
               <path
-                d="M140 12 A 59 59 0 0 0 150 130"
+                d="M150 10 C 215 45, 215 95, 150 130"
                 stroke="currentColor"
                 strokeWidth="5"
                 strokeLinecap="round"
@@ -186,7 +186,7 @@ const Hero = () => {
                 className="animate-[dashFlow_3s_linear_infinite]"
               />
               <path
-                d="M150 130 l-15 -6 M150 130 l-6 -15"
+                d="M150 130 l14 -8 M150 130 l16 6"
                 stroke="currentColor"
                 strokeWidth="5"
                 strokeLinecap="round"
@@ -217,7 +217,7 @@ const Hero = () => {
               )}
             </div>
             <span className="text-white text-[10px] md:text-xs font-bold tracking-widest uppercase opacity-70 group-hover:opacity-100 transition-opacity">
-              {!isPlaying ? "Play Reel" : isMuted ? "Playing (muted)" : "Playing"}
+              {!isPlaying ? "Play" : isMuted ? "Playing (muted)" : "Playing"}
             </span>
           </button>
         </div>
