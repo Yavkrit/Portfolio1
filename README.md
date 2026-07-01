@@ -1,16 +1,39 @@
-# React + Vite
+# Yavkrit Vashishtha — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Yavkrit Vashishtha, Embedded Software Engineer & Research Scholar (AcSIR / CSIR-CSIO). Built with React 19, Vite, Tailwind CSS v4, Framer Motion, and AOS.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite** — UI and build tooling
+- **Tailwind CSS v4** — styling
+- **Framer Motion** — scroll-driven and interactive animations
+- **AOS (Animate On Scroll)** — reveal animations
+- **EmailJS** — contact form delivery (falls back to a `mailto:` link if unconfigured)
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/data/portfolioData.js` — single source of truth for all site content (personal info, experience, projects, education, certificates, etc.). Update this file to change content anywhere on the site.
+- `src/components/` — one component per section (Hero, About, Projects, Experience, Research, Education, Certificates, Contact, etc.), composed in `src/App.jsx`.
+- `public/` — static assets served as-is (resume, certificate PDFs, favicon).
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev      # start dev server
+npm run build    # production build
+npm run preview  # preview the production build locally
+npm run lint     # run ESLint
+```
+
+## Contact Form
+
+The contact form uses [EmailJS](https://www.emailjs.com/). Set the following environment variables (e.g. in a `.env` file) to enable direct email delivery:
+
+```
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+Without these set, form submissions fall back to opening a pre-filled `mailto:` link.

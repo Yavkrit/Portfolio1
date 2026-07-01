@@ -1,7 +1,9 @@
 {
-  "name": "video_portfolio",
+  "name": "yavkrit-vashishtha-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Portfolio of Yavkrit Vashishtha — Embedded Software Engineer & Research Scholar (CSIR-CSIO / AcSIR).",
+  "author": "Yavkrit Vashishtha",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,12 +12,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
+    "@icons-pack/react-simple-icons": "^13.13.0",
     "@tailwindcss/vite": "^4.3.0",
     "aos": "^2.3.4",
     "framer-motion": "^12.40.0",
+    "lucide-react": "^1.22.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-router-dom": "^7.18.1",
+    "resend": "^6.16.0",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
